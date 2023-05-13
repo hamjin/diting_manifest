@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote  name="github"
+           fetch="https://github.com" />
+  
+  <!-- AOSPA -->
+  <remote  name="aospa"
+           fetch=".."
+           review="gerrit.aospa.co"
+           revision="topaz"/>
+
+  <remote name="clo_kernel_waipio"
+          fetch="https://git.codelinaro.org/clo/la"
+          sync-c="true"
+          sync-tags="false"
+          review="codelinaro.org"
+          revision="refs/tags/KERNEL.PLATFORM.1.0.r1-10700-kernel.0" />
+
+  <remote name="clo_vendor_waipio"
+          fetch="https://git.codelinaro.org/clo/la"
+          sync-c="true"
+          sync-tags="false"
+          review="codelinaro.org"
+          revision="refs/tags/LA.VENDOR.1.0.r1-15600-WAIPIO.0" />
+
+  <remote name="clo_video_waipio"
+          fetch="https://git.codelinaro.org/clo/la"
+          sync-c="true"
+          sync-tags="false"
+          review="codelinaro.org"
+          revision="refs/tags/VIDEO.LA.2.0.r1-05100-WAIPIO.0" />
+
+  <!-- AOSPA -->
+  <project name="AOSPA/android_hardware_qcom_audio" path="vendor/qcom/opensource/audio-hal/primary-hal" remote="aospa" revision="topaz-8450" />
+  <project name="AOSPA/android_hardware_qcom_display" path="hardware/qcom/display" remote="aospa" revision="topaz-8450" />
+  <project name="AOSPA/android_hardware_qcom_gps" path="hardware/qcom/gps" remote="aospa" revision="topaz-8450" />
+  <project name="AOSPA/android_hardware_qcom_media" path="hardware/qcom/media" remote="aospa" revision="topaz-8450" />
+  <project name="AOSPA/android_hardware_xiaomi" path="hardware/xiaomi" remote="aospa" />
+  <project name="AOSPA/android_vendor_qcom_opensource_arpal-lx" path="vendor/qcom/opensource/pal" remote="aospa" revision="topaz-8450" />
+
+  <!-- Xiaomi Diting Development - ROM -->
+  <project name="Xiaomi-Diting-Development/android_kernel_xiaomi_diting" path="kernel_platform/msm-kernel" remote="github" revision="lineage-20" />
+  <project name="Xiaomi-Diting-Development/android_vendor_qcom_proprietary_display-devicetree" path="vendor/qcom/proprietary/display-devicetree" remote="github" revision="lineage-20" />
+
+  <!-- Xiaomi SM8450 Kernel -->
+  <project name="xiaomi-sm8450-kernel/android_kernel_platform_build" path="kernel_platform/build" remote="github" revision="lineage-20" />
+  <!-- <project name="xiaomi-sm8450-kernel/android_kernel_platform_msm-kernel" path="kernel_platform/msm-kernel" remote="github" revision="lineage-20" /> -->
+  <project name="xiaomi-sm8450-kernel/android_vendor_qcom_opensource_audio-kernel" path="vendor/qcom/opensource/audio-kernel" remote="github" revision="lineage-20" />
+  <project name="xiaomi-sm8450-kernel/android_vendor_qcom_opensource_camera-kernel" path="vendor/qcom/opensource/camera-kernel" remote="github" revision="lineage-20" />
+  <project name="xiaomi-sm8450-kernel/android_vendor_qcom_opensource_display-drivers" path="vendor/qcom/opensource/display-drivers" remote="github" revision="lineage-20" />
+  <project name="Xiaomi-Diting-Development/android_vendor_qcom_proprietary_devicetree" path="kernel_platform/msm-kernel/arch/arm64/boot/dts/vendor" remote="github" revision="lineage-20" />
+  <project name="Xiaomi-Diting-Development/android_vendor_qcom_proprietary_audio-devicetree" path="vendor/qcom/proprietary/audio-devicetree" remote="github" revision="lineage-20" />
+  <project name="Xiaomi-Diting-Development/android_vendor_qcom_proprietary_camera-devicetree" path="vendor/qcom/proprietary/camera-devicetree" remote="github" revision="lineage-20" />
+  <project name="xiaomi-sm8450-kernel/android_vendor_qcom_proprietary_cvp-devicetree" path="vendor/qcom/proprietary/cvp-devicetree" remote="github" revision="lineage-20" />
+  <project name="xiaomi-sm8450-kernel/android_vendor_qcom_proprietary_mmrm-devicetree" path="vendor/qcom/proprietary/mmrm-devicetree" remote="github" revision="lineage-20" />
+  <project name="xiaomi-sm8450-kernel/android_vendor_qcom_proprietary_video-devicetree" path="vendor/qcom/proprietary/video-devicetree" remote="github" revision="lineage-20" />
+
+  <!-- kernel_platform -->
+  <project name="kernel/common" path="kernel_platform/common" remote="clo_kernel_waipio" />
+  <project name="kernel/prebuilts/build-tools" path="kernel_platform/prebuilts/kernel-build-tools" remote="clo_kernel_waipio" clone-depth="1" />
+  <project name="kernel_platform/external/dtc" remote="clo_kernel_waipio" />
+  <project name="kernel_platform/kernel/prebuilts/mainline/arm64" remote="clo_kernel_waipio" clone-depth="1" />
+  <project name="kernel_platform/prebuilts/build-tools" remote="clo_kernel_waipio" clone-depth="1" />
+  <project name="kernel_platform/system/tools/mkbootimg" path="kernel_platform/tools/mkbootimg" remote="clo_kernel_waipio" clone-depth="1" />
+  <project name="kernelplatform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" path="kernel_platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" remote="clo_kernel_waipio" clone-depth="1" />
+  <project name="kernelplatform/prebuilts-master/clang/host/linux-x86" path="kernel_platform/prebuilts-master/clang/host/linux-x86" remote="clo_kernel_waipio" clone-depth="1" />
+
+  <!-- vendor -->
+  <project name="platform/vendor/opensource/cvp-kernel" path="vendor/qcom/opensource/cvp-kernel" remote="clo_vendor_waipio" />
+  <project name="platform/vendor/opensource/dataipa" path="vendor/qcom/opensource/dataipa" remote="clo_vendor_waipio" />
+  <project name="platform/vendor/opensource/eva-kernel" path="vendor/qcom/opensource/eva-kernel" remote="clo_vendor_waipio" />
+  <project name="platform/vendor/opensource/mmrm-driver" path="vendor/qcom/opensource/mmrm-driver" remote="clo_video_waipio" />
+  <project name="platform/vendor/opensource/mmrm-driver-test" path="vendor/qcom/opensource/mmrm-driver/test" remote="clo_video_waipio" />
+  <project name="platform/vendor/opensource/touch-drivers" path="vendor/qcom/opensource/touch-drivers" remote="clo_vendor_waipio" />
+  <project name="platform/vendor/opensource/video-driver" path="vendor/qcom/opensource/video-driver" remote="clo_video_waipio" />
+  <project name="platform/vendor/opensource/video-driver-test" path="vendor/qcom/opensource/video-driver/test" remote="clo_video_waipio" />
+  <project name="platform/vendor/qcom-opensource/wlan/fw-api" path="vendor/qcom/opensource/wlan/fw-api" remote="clo_vendor_waipio" revision="9aecb64df17a3e7a71abdfbc874a5faed92cdc96" upstream="refs/heads/wlan-api.lnx.1.0.r68-rel" />
+  <project name="platform/vendor/qcom-opensource/wlan/qca-wifi-host-cmn" path="vendor/qcom/opensource/wlan/qca-wifi-host-cmn" remote="clo_vendor_waipio" revision="404365098110d0eeea595e7b87ff32006dd7dc4a" upstream="refs/heads/wlan-cmn.driver.lnx.2.0.r30-rel" />
+  <project name="platform/vendor/qcom-opensource/wlan/qcacld-3.0" path="vendor/qcom/opensource/wlan/qcacld-3.0" remote="clo_vendor_waipio" revision="739d63a8b4e20dd7285dbe5f758f2ad41f331aa6" upstream="refs/heads/wlan-cld3.driver.lnx.2.0.r30-rel" />
+  <project name="platform/vendor/qcom/opensource/datarmnet" path="vendor/qcom/opensource/datarmnet" remote="clo_vendor_waipio" />
+  <project name="platform/vendor/qcom/opensource/datarmnet-ext" path="vendor/qcom/opensource/datarmnet-ext" remote="clo_vendor_waipio" />
+</manifest>
